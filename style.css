@@ -40,6 +40,13 @@ h1 {
     font-size: 1.5em;
     font-weight: bold;
     color: #ecf0f1;
+    margin-bottom: 15px;
+}
+
+.instructions {
+    font-size: 0.9em;
+    color: #95a5a6;
+    margin-top: 10px;
 }
 
 #startButton {
@@ -48,7 +55,7 @@ h1 {
     cursor: pointer;
     border: none;
     border-radius: 5px;
-    /* Divine green gradient for the button! */
+    /* Green gradient for the button! */
     background: linear-gradient(90deg, #2ecc71, #27ae60);
     color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);

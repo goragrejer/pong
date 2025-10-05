@@ -1,42 +1,29 @@
-// --- DOM References ---
-const color1 = document.getElementById('color1');
-const color2 = document.getElementById('color2');
-const gradientBox = document.getElementById('gradient-box');
-const cssOutput = document.getElementById('css-output');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pong Game</title>
+    <link rel="stylesheet" href="pong-style.css"> 
+</head>
+<body>
 
-// --- Core Logic ---
+    <div class="container">
+        <h1>Classic Pong</h1>
 
-/**
- * Generates the CSS gradient string and updates the UI.
- */
-function generateGradient() {
-    // 1. Get the current colors
-    const c1 = color1.value;
-    const c2 = color2.value;
-    
-    // 2. Create the linear-gradient CSS value
-    // We use a 45-degree angle for that dynamic, diagonal look
-    const gradientValue = `linear-gradient(45deg, ${c1}, ${c2})`;
-    
-    // 3. Update the Live Preview Box
-    gradientBox.style.background = gradientValue;
-    
-    // 4. Update the CSS Output Text Area
-    // Provide the full CSS block, ready to copy-paste into style.css
-    cssOutput.value = 
-`/* Copy and Paste this block into your style.css */
-.my-custom-card {
-    background: ${gradientValue};
-    /* Don't forget to define a solid border! */
-    border: 1px solid ${c1}; 
-}`;
-}
+        <div id="score">Player 1: 0 | Player 2: 0</div>
 
-// --- Event Listeners ---
+        <canvas id="pongCanvas" width="600" height="400"></canvas>
 
-// Update the gradient whenever a color picker value changes
-color1.addEventListener('input', generateGradient);
-color2.addEventListener('input', generateGradient);
+        <div class="controls">
+            <button id="startButton">Start Game</button>
+        </div>
 
-// Initial call to set the default gradient when the page loads
-generateGradient();
+        <p class="instructions">
+            Player 1: W (Up), S (Down) | Player 2: Arrow Up, Arrow Down
+        </p>
+    </div>
+
+    <script src="pong.js"></script>
+</body>
+</html>

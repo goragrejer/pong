@@ -1,0 +1,61 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #2c3e50; /* Dark, deep background */
+    color: #ecf0f1;
+}
+
+.container {
+    background: #34495e; /* Slightly lighter background for the container */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+h1 {
+    color: #f1c40f; /* Yellow accent */
+    margin-bottom: 15px;
+}
+
+/* The Game Drawing Surface */
+#pongCanvas {
+    background-color: #000; /* Black playing field */
+    border: 3px solid #f1c40f; /* Yellow border */
+    display: block; /* Removes any extra space below the canvas */
+    margin-bottom: 15px;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#score {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ecf0f1;
+}
+
+#startButton {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    /* Divine green gradient for the button! */
+    background: linear-gradient(90deg, #2ecc71, #27ae60);
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+#startButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
